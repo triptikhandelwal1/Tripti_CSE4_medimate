@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🥗 Diet Tips - Medimate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', sans-serif;
+      background: linear-gradient(to right, #ffffff, #ffffff);
+      color: #333;
+    }
+
+    header {
+      background-color: #466667;
+      color: rgb(0, 0, 0);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      border-radius: 0 0 25px 25px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 1rem;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #000000;
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      line-height: 1.8;
+    }
+
+    ul li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    ul li::before {
+      content: '🥗 ';
+      margin-right: 0.3rem;
+    }
+
+    .tip-box {
+      background-color: #e8f5e9;
+      padding: 1rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #034433;
+      animation: fadeIn 0.5s ease;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 1rem;
+      background-color: #466667;
+      color: white;
+      border-radius: 25px 25px 0 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header class="animate__animated animate__fadeInDown">
+    <h1> Healthy Diet Tips</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="reminder.html"> Set Reminder</a></li>
+        <li><a href="hydration.html"> Hydration</a></li>
+        <li><a href="game.html"> Games</a></li>
+        <li><a href="about.html"> About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container animate__animated animate__fadeInUp">
+    <h2>Smart Eating for a Healthier You</h2>
+
+    <div class="tip-box">
+      <ul>
+        <li>Eat more fruits 🍎, vegetables 🥦, and whole grains 🌾.</li>
+        <li>Limit processed foods and sugary drinks 🥤.</li>
+        <li>Include protein from plant or lean animal sources 🐟🥚.</li>
+        <li>Don’t skip meals! Try to eat at regular times ⏰.</li>
+        <li>Read labels carefully – watch for added sugar and salt 🧂.</li>
+        <li>Choose healthy fats like nuts 🥜, seeds, and olive oil 🫒.</li>
+        <li>Make water your best friend – hydrate regularly 💧.</li>
+        <li>Listen to your body – eat when you’re hungry and stop when full 🧠.</li>
+        <li>Enjoy your meals and eat mindfully 🍽️.</li>
+        <li>Balance is key! No food is off-limits in moderation 🎯.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Medimate. All rights reserved.</p>
+  </footer>
+</body>
+</html>
