@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> About Us - Medimate</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'georgia', sans-serif;
+    }
+
+    /* Body and Text Styling */
+    body {
+      background-color: #f3f6fb;
+      color: #151414;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #000000;
+      margin-top: 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #79807c;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 15px;
+      color: #100e0e;
+    }
+
+    /* Navigation Bar */
+    header {
+      background-color: #466667;
+      padding: 1rem;
+      border-radius: 0 0 20px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    nav a:hover, nav a.active {
+      color: #042f15;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+    }
+
+    footer {
+      background-color: #466667;
+      color: white;
+      padding: 1rem;
+      margin-top: 20px;
+    }
+
+    /* Animation (imported) */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Apply animation to the content */
+    .animate__fadeInUp {
+      animation: fadeInUp 1s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> About Us</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="reminder.html"> Set Reminder</a></li>
+        <li><a href="diet.html">🥗 Diet Tips</a></li>
+        <li><a href="hydration.html">💧 Hydration</a></li>
+        <li><a href="game.html"> Games</a></li>
+        <li><a href="about.html" class="active"> About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="animate__fadeInUp">
+    <section class="about-section">
+      <h2>Welcome to Medimate! 🩺</h2>
+      <p>
+        Medimate is your friendly personal assistant for managing your medicine reminders, dietary tips, hydration schedules, and engaging wellness games!
+      </p>
+      <p>
+        This project is proudly built by a passionate team of four students from <strong>KR Mangalam University</strong> 💙 with the vision of helping individuals across all age groups maintain a healthy lifestyle.
+      </p>
+      <p>
+        Our team is led by <strong>Tripti Khandelwal</strong>, and we're dedicated to providing an easy, friendly, and professional experience for everyone who needs help staying on track with their wellness.
+      </p>
+      <p>
+        Whether you're a child learning healthy habits or a senior managing your daily routines — Medimate is here to help.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Medimate. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript for Animations and Dynamic Elements
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log("Medimate About Us page is loaded!");
+      // You can add more interactivity here if needed.
+    });
+  </script>
+</body>
+</html>
