@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎮 Games - Medimate</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    body {
+      font-family: 'georgia', sans-serif;
+      background: linear-gradient(to bottom right, #ffffff, #ffffff);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    header {
+      background-color: #466667;
+      color: rgb(0, 0, 0);
+      padding: 1rem;
+      border-radius: 0 0 20px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0;
+      margin: 1rem 0 0 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .game-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .game-box {
+      background-color: #466667;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color:#000000;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .game-box:hover {
+      transform: scale(1.1);
+      background-color: #fce4ec;
+    }
+
+    footer {
+      background-color: #466667;
+      color: white;
+      padding: 3rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="animate__animated animate__fadeInDown">🎮 Games</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="reminder.html"> Set Reminder</a></li>
+        <li><a href="diet.html">🥗 Diet Tips</a></li>
+        <li><a href="hydration.html">💧 Hydration</a></li>
+        <li><a href="games.html" class="active"> Games</a></li>
+        <li><a href="about.html"> About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="animate__fadeInUp">
+    <h2>Click on a game to start:</h2>
+
+    <div class="game-container">
+      <div class="game-box">
+        <a href="game1.html">🧘‍♀️ Breathing</a>
+      </div>
+      <div class="game-box">
+        <a href="game2.html">💧 Hydration</a>
+      </div>
+      <div class="game-box">
+        <a href="game3.html">🧠 Memory</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Medimate. All rights reserved.</p>
+  </footer>
+</body>
+</html>
