@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Set Reminder - Medimate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', sans-serif;
+      background: linear-gradient(to right, #ffffff, #ffffff);
+      color: #333;
+    }
+
+    header {
+      background-color: #466667;
+      color: rgb(0, 0, 0);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      border-radius: 0 0 25px 25px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 1rem;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .container h2 {
+      margin-bottom: 1.5rem;
+      color: #388e3c;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    input, select, button {
+      margin-top: 0.5rem;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      
+font-family: "Times New Roman", Times, serif;
+
+    }
+
+    button {
+      margin-top: 1.5rem;
+      background-color: #4caf50;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    .reminder-list {
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .reminder-item {
+      background-color: #e8f5e9;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-left: 5px solid #4caf50;
+      border-radius: 8px;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 1rem;
+      background-color: #466667;
+      color: white;
+      border-radius: 25px 25px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="animate__animated animate__fadeInDown">
+    <h1> Set Your Medication Reminders</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="diet.html"> Diet Tips</a></li>
+        <li><a href="hydration.html"> Hydration</a></li>
+        <li><a href="game.html"> Games</a></li>
+        <li><a href="about.html"> About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container animate__animated animate__fadeInUp">
+    <h2>Set a Reminder</h2>
+    <label for="med-name">Medicine Name:</label>
+    <input type="text" id="med-name" placeholder="e.g., Vitamin D"/>
+
+    <label for="med-time">Reminder Time:</label>
+    <input type="time" id="med-time"/>
+
+    <button onclick="addReminder()">Add Reminder</button>
+
+    <div class="reminder-list" id="reminder-list">
+      <!-- Reminders will appear here -->
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Medimate. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function addReminder() {
+      const name = document.getElementById('med-name').value;
+      const time = document.getElementById('med-time').value;
+      const list = document.getElementById('reminder-list');
+
+      if (!name || !time) {
+        alert("Please fill both fields!");
+        return;
+      }
+
+      const item = document.createElement('div');
+      item.className = 'reminder-item';
+      item.innerHTML = `<strong>${name}</strong> - ⏰ ${time}`;
+      list.appendChild(item);
+
+      // Clear inputs
+      document.getElementById('med-name').value = '';
+      document.getElementById('med-time').value = '';
+    }
+  </script>
+</body>
+</html>
