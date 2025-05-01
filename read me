@@ -1,0 +1,33 @@
+# Medimate – Your Smart Health Assistant
+
+Medimate is a wellness-focused web application designed to help users stay on top of their health. It provides personalized reminders, hydration tracking, diet tips, and interactive features to make health management engaging and effortless.
+
+## 🚀 Project Overview
+
+Medimate is a *medication and wellness reminder* website that supports users in:
+- Keeping track of medicine intake.
+- Getting regular hydration alerts.
+- Accessing smart diet tips.
+- Enjoying health-based games.
+- Viewing personalized wellness analysis.
+
+The goal is to *combine healthcare with interactivity* to promote a healthy lifestyle through timely notifications and user-friendly interfaces.
+
+## 🛠 Tools and Technologies
+
+- *Frontend*: HTML, CSS, nodejs,react
+- *Frameworks/Libraries*: Bootstrap, custom JS scripts
+- *Design Tools*: Figma (for UI/UX planning)
+- *Version Control*: Git, GitHub
+
+> Note: The current version is run locally (index.html) and does not yet include backend integration.
+
+## ✨ Features
+
+- *Medication Reminders*: Set alerts to take your medicine on time.
+- *Hydration Tracker*: Stay hydrated with regular water intake notifications.
+- *Smart Diet Tips*: Get personalized tips for a balanced diet.
+- *Interactive Games*: Health-themed games for engagement and education.
+- *Report Analysis*: Track your progress and health stats (planned feature).
+- *User-friendly Interface*: Clean, responsive design with easy navigation.
+
