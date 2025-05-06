@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medimate – Report Analysis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📊 Health Report Analysis</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="reminder.html">⏰ Reminders</a></li>
+        <li><a href="hydration.html">💧 Hydration</a></li>
+        <li><a href="diet.html">🍽️ Diet Tips</a></li>
+        <li><a href="game.html">🎮 Games</a></li>
+        <li><a href="report.html">📊 Report</a></li>
+        <li><a href="about.html">ℹ️ About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="report-container">
+      <div class="report-column">
+        <h2>📤 Submit Your Report</h2>
+        <p>Upload your monthly report. Our AI tool will compare this report with your previous one.</p>
+        <input type="file" />
+        <button>Submit Report</button>
+      </div>
+      <div class="report-column">
+        <h2>📈 AI-Based Health Stats</h2>
+        <table class="stats-table">
+          <thead>
+            <tr><th>Health Metric</th><th>Previous</th><th>Current</th><th>Change</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Vitamin D</td><td>18 ng/mL</td><td>24 ng/mL</td><td>⬆ +6</td></tr>
+            <tr><td>Glucose</td><td>105 mg/dL</td><td>98 mg/dL</td><td>⬇ -7</td></tr>
+            <tr><td>Iron</td><td>45 µg/dL</td><td>50 µg/dL</td><td>⬆ +5</td></tr>
+            <tr><td>Cholesterol</td><td>220 mg/dL</td><td>210 mg/dL</td><td>⬇ -10</td></tr>
+            <tr><td>Sugar</td><td>140 mg/dL</td><td>130 mg/dL</td><td>⬇ -10</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="report-summary">
+      <h3>📝 Summary</h3>
+      <p>You're improving in glucose and cholesterol levels. Slight Vitamin D deficiency remains. Great progress!</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Medimate | Report Dashboard powered by Smart Analytics AI
+  </footer>
+</body>
+</html>

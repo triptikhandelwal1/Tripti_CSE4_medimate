@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medimate – Interactive Games</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎮 Medimate Wellness Games</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="reminder.html">⏰ Reminders</a></li>
+        <li><a href="hydration.html">💧 Hydration</a></li>
+        <li><a href="diet.html">🍽️ Diet Tips</a></li>
+        <li><a href="game.html">🎮 Games</a></li>
+        <li><a href="report.html">📊 Report</a></li>
+        <li><a href="about.html">ℹ️ About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="game-launchers">
+      <div class="game-box" onclick="openGame('breatheGame')">🧘 Breathing Game</div>
+      <div class="game-box" onclick="openGame('waterGame')">💧 Hydration Clicker</div>
+      <div class="game-box" onclick="openGame('memoryGame')">🧠 Memory Match</div>
+    </section>
+
+    <!-- GAME MODALS -->
+    <div id="breatheGame" class="game-modal">
+      <div class="game-content">
+        <span class="close-btn" onclick="closeGame('breatheGame')">&times;</span>
+        <h2>🧘 Breathing Game</h2>
+        <div id="breatheCircle" class="breathing-circle">Breathe</div>
+      </div>
+    </div>
+
+    <div id="waterGame" class="game-modal">
+<div class="game-content"><span class="close-btn" onclick="closeGame('waterGame')">&times;</span><h2>🧪 Hydration Quiz Game</h2><p>How much water should an adult drink daily?</p><button onclick="answerQuiz('A')">A) 2 glasses</button><br><button onclick="answerQuiz('B')">B) 5 glasses</button><br><button onclick="answerQuiz('C')">C) 8+ glasses</button><p id="quiz-result"></p></div>
+      <div class="game-content">
+        <span class="close-btn" onclick="closeGame('waterGame')">&times;</span>
+        <h2>💧 Hydration Game</h2>
+        <button onclick="hydrate()">Drink Water</button>
+        <p id="hydrateScore">0 / 10 glasses</p>
+      </div>
+    </div>
+
+    <div id="memoryGame" class="game-modal">
+      <div class="game-content">
+        <span class="close-btn" onclick="closeGame('memoryGame')">&times;</span>
+        <h2>🧠 Memory Game</h2>
+        <div class="memory-grid"><div class="card" onclick="flip(this)">🔒</div><div class="card" onclick="flip(this)">🔒</div><div class="card" onclick="flip(this)">🔒</div><div class="card" onclick="flip(this)">🔒</div><div class="card" onclick="flip(this)">🔒</div><div class="card" onclick="flip(this)">🔒</div><div class="card" onclick="flip(this)">🔒</div><div class="card" onclick="flip(this)">🔒</div>
+          <div class="card" onclick="flip(this)">🔒</div>
+          <div class="card" onclick="flip(this)">🔒</div>
+          <div class="card" onclick="flip(this)">🔒</div>
+          <div class="card" onclick="flip(this)">🔒</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Medimate | Fun Games for Healthy Living
+  </footer>
+
+  <script>
+    function openGame(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function closeGame(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    setInterval(() => {
+      const circle = document.getElementById('breatheCircle');
+      if (circle) circle.classList.toggle('expand');
+    }, 4000);
+
+    let waterClicks = 0;
+    function hydrate() {
+      if (waterClicks < 10) {
+        waterClicks++;
+        document.getElementById('hydrateScore').innerText = waterClicks + ' / 10 glasses';
+      }
+    }
+
+    function flip(card) {
+      card.textContent = card.textContent === '🔒' ? '🎯' : '🔒';
+    }
+  
+function answerQuiz(opt) {
+  const result = document.getElementById('quiz-result');
+  if (opt === 'C') {
+    result.innerText = "✅ Correct! Aim for 8 or more glasses a day.";
+  } else {
+    result.innerText = "❌ Not quite! You should aim for 8+ glasses.";
+  }
+}
+
+</script>
+</body>
+</html>

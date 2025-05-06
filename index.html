@@ -1,136 +1,48 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Medimate - Your Personal Health Assistant</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <style>
-    body {
-      font-family: 'georgia', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #ffffff, #ffffff);
-      color: #333;
-    }
-
-    header {
-      background-color: #466667;
-      padding: 20px;
-      text-align: center;
-      color: rgb(0, 0, 0);
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
-    nav a:hover {
-      color: #e6e5e3;
-    }
-
-    main {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    main h1 {
-      font-size: 2.5rem;
-      color: #090909;
-      margin-bottom: 10px;
-    }
-
-    main p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
-    }
-
-    .feature-boxes {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .feature {
-      background-color: #466667;
-      padding: 20px;
-      border-radius: 20px;
-      width: 250px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .feature:hover {
-      transform: translateY(-10px);
-    }
-
-    footer {
-      background-color: #466667;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-      font-size: 0.9rem;
-      border-top-left-radius: 30px;
-      border-top-right-radius: 30px;
-    }
-  </style>
+  <title>Medimate – Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="animate__animated animate__fadeInDown">
-    <h1>💊 Welcome to Medimate</h1>
-    <p>Your friendly personal assistant for health & wellness</p>
+  <header>
+    <h1>💊 Medimate</h1>
+    <p>Your Smart Health Assistant</p>
     <nav>
-      <ul>
-        <li><a href="index.html"> Home</a></li>
-        <li><a href="reminder.html"> Set Reminder</a></li>
-        <li><a href="diet.html">🍽️ Diet Tips</a></li>
-        <li><a href="hydration.html">💧 Hydration</a></li>
-        <li><a href="game.html"> Games</a></li>
-        <li><a href="about.html"> About Us</a></li>
-      </ul>
-    </nav>
+
+<ul>
+  <li><a href="index.html">🏠 Home</a></li>
+  <li><a href="reminder.html">⏰ Reminders</a></li>
+  <li><a href="hydration.html">💧 Hydration</a></li>
+  <li><a href="diet.html">🍽️ Diet Tips</a></li>
+  <li><a href="game.html">🎮 Games</a></li>
+  <li><a href="report.html">📊 Report</a></li>
+  <li><a href="about.html">ℹ️ About</a></li>
+</ul>
+
+</nav>
   </header>
 
-  <main class="animate__animated animate__fadeInUp">
-    <h1>Hello! </h1>
-    <p>
-      Medimate helps you stay on track with your medication, hydration, and diet.
-      It provides friendly reminders, healthy tips from dietitians, and fun games to keep your wellness journey exciting.
-      Whether you're young or a senior, Medimate is here to support your healthy lifestyle!
-    </p>
+  <main>
+    <section class="hero">
+      <h2>Welcome to Medimate</h2>
+      <p>Track your wellness, stay hydrated, eat right, and have fun while managing your health!</p>
+      <a href="reminder.html" class="cta-button">🚀 Get Started</a>
+    </section>
 
-    <div class="feature-boxes">
-      <div class="feature">⏰ Set reminders to take your medicine on time.</div>
-      <div class="feature">🍽️ Get dietary advice to eat well with your medication.</div>
-      <div class="feature">💧 Hydration tips and water alerts to stay refreshed.</div>
-      <div class="feature">🎮 Enjoy fun games designed to support mental and physical health.</div>
-    </div>
+    <section class="features">
+      <div class="feature-card">💧 Stay Hydrated Hourly</div>
+      <div class="feature-card">⏰ Set Reminders for Meds</div>
+      <div class="feature-card">🍎 Smart Diet Tips</div>
+      <div class="feature-card">🎮 Interactive Games</div>
+    </section>
   </main>
-  <script src="script.js"></script>
-
 
   <footer>
-    &copy; 2025 Medimate. All rights reserved. | Designed by Team Medimate (Lead: Tripti Khandelwal, K.R. Mangalam University)
+    &copy; 2025 Medimate. Built by Team Medimate | Tripti (Lead), Rohini, Ayushi, Alya
   </footer>
 </body>
 </html>

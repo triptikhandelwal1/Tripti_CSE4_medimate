@@ -1,117 +1,68 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>💧 Hydration - Medimate</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <style>
-    body {
-      font-family: 'georgia', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #ffffff, #ffffff);
-      color: #004d40;
-    }
-
-    header {
-      background-color: #466667;
-      padding: 1rem;
-      color: rgb(0, 0, 0);
-      text-align: center;
-      border-radius: 0 0 20px 20px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 0;
-      margin: 10px 0 0 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: rgb(0, 0, 0);
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #ffeb3b;
-    }
-
-    main {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .hydrate-box {
-      background: white;
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      margin: 2rem auto;
-      font-size: 1.2rem;
-    }
-
-    .hydrate-box h2 {
-      color: #00796b;
-    }
-
-    .alert {
-      background-color: #466667;
-      color: rgb(0, 0, 0);
-      padding: 1rem;
-      border-radius: 10px;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      background-color: #466667;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-      border-radius: 20px 20px 0 0;
-      margin-top: 2rem;
-    }
-  </style>
+  <title>Medimate – Hydration Tracker</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="animate__animated animate__fadeInDown">
-    <h1>💧 Hydration Reminder</h1>
+  <header>
+    <h1>💧 Hydration Tracker</h1>
     <nav>
       <ul>
-        <li><a href="index.html"> Home</a></li>
-        <li><a href="reminder.html"> Set Reminder</a></li>
-        <li><a href="diet.html">🍽️ Diet Tips</a></li>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="reminder.html">⏰ Reminders</a></li>
         <li><a href="hydration.html">💧 Hydration</a></li>
-        <li><a href="game.html"> Games</a></li>
-        <li><a href="about.html"> About Us</a></li>
+        <li><a href="diet.html">🍽️ Diet Tips</a></li>
+        <li><a href="game.html">🎮 Games</a></li>
+        <li><a href="report.html">📊 Report</a></li>
+        <li><a href="about.html">ℹ️ About</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div class="hydrate-box animate__animated animate__fadeInUp">
-      <div class="alert">🚨 Don't forget to drink water regularly!</div>
-      <h2>Why Water is Important 💦</h2>
-      <p>
-        Water is essential to maintain your body's functions. Staying hydrated helps regulate temperature, keeps your joints lubricated, and aids in digestion and nutrient absorption.
-      </p>
-      <p>
-        Drinking enough water daily can also improve your energy levels, focus, and overall health. Adults should aim for 8–10 glasses a day!
-      </p>
-      <p>
-        🕒 Tip: Set reminders every 2 hours to drink a glass of water!
-      </p>
-    </div>
+    <section class="hydration-tank">
+      <h2>Stay Hydrated to Stay Healthy</h2>
+      <p>Drinking enough water improves brain function, boosts energy, flushes toxins, and aids digestion. Aim for at least 8 glasses a day! 💦</p>
+      <div class="tank-container">
+        <div class="tank">
+          <div class="water" id="water-level"></div>
+        </div>
+        <p id="glasses-left">8 glasses left</p>
+        <button onclick="drinkWater()">✅ I Drank a Glass</button>
+        <p id="motivation-msg">Let’s keep going! Hydration is key! 🥤</p>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Medimate. All rights reserved.</p>
+    &copy; 2025 Medimate | Designed to Keep You Hydrated and Healthy
   </footer>
+
+  <script>
+    let glasses = 8;
+    const messages = [
+      "Water boosts your energy! ⚡",
+      "Your skin loves hydration! 💧",
+      "You’re keeping headaches away! ✅",
+      "Great job flushing toxins! 🚿",
+      "Water keeps your joints strong! 💪",
+      "Helps you think better too! 🧠",
+      "Almost there, stay refreshed! 🌟",
+      "Hydrated and healthy—well done! 🎉"
+    ];
+
+    function drinkWater() {
+      if (glasses > 0) {
+        glasses--;
+        document.getElementById('glasses-left').innerText = glasses + ' glasses left';
+        document.getElementById('water-level').style.height = (glasses * 12.5) + '%';
+        document.getElementById('motivation-msg').innerText = messages[7 - glasses];
+      }
+    }
+  </script>
 </body>
 </html>

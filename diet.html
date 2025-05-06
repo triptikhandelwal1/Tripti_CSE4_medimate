@@ -1,141 +1,97 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🥗 Diet Tips - Medimate</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', sans-serif;
-      background: linear-gradient(to right, #ffffff, #ffffff);
-      color: #333;
-    }
-
-    header {
-      background-color: #466667;
-      color: rgb(0, 0, 0);
-      padding: 1.5rem 1rem;
-      text-align: center;
-      border-radius: 0 0 25px 25px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      gap: 1rem;
-      padding: 0;
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: rgb(0, 0, 0);
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ffeb3b;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      text-align: center;
-      color: #000000;
-      margin-bottom: 1.5rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-      line-height: 1.8;
-    }
-
-    ul li {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
-
-    ul li::before {
-      content: '🥗 ';
-      margin-right: 0.3rem;
-    }
-
-    .tip-box {
-      background-color: #e8f5e9;
-      padding: 1rem;
-      border-radius: 12px;
-      margin-bottom: 1.5rem;
-      border-left: 5px solid #034433;
-      animation: fadeIn 0.5s ease;
-    }
-
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      padding: 1rem;
-      background-color: #466667;
-      color: white;
-      border-radius: 25px 25px 0 0;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medimate – Diet Assistant</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="animate__animated animate__fadeInDown">
-    <h1> Healthy Diet Tips</h1>
+  <header>
+    <h1>🍽️ Medimate Diet Assistant</h1>
     <nav>
       <ul>
-        <li><a href="index.html"> Home</a></li>
-        <li><a href="reminder.html"> Set Reminder</a></li>
-        <li><a href="hydration.html"> Hydration</a></li>
-        <li><a href="game.html"> Games</a></li>
-        <li><a href="about.html"> About Us</a></li>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="reminder.html">⏰ Reminders</a></li>
+        <li><a href="hydration.html">💧 Hydration</a></li>
+        <li><a href="diet.html">🍽️ Diet Tips</a></li>
+        <li><a href="game.html">🎮 Games</a></li>
+        <li><a href="report.html">📊 Report</a></li>
+        <li><a href="about.html">ℹ️ About</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="container animate__animated animate__fadeInUp">
-    <h2>Smart Eating for a Healthier You</h2>
+  <main>
+    <section class="diet-tips">
+      <h2>🍎 Personalized Diet Tips</h2>
+      <p>Enter your current medication below and let Medimate suggest foods to include or avoid. Our AI assistant ensures your meals work with your treatment, not against it. 🤖</p>
+      <input type="text" id="medication" placeholder="Enter your medicine e.g. Metformin" />
+      <button onclick="getDietTips()">Get Tips</button>
+      <div id="diet-suggestions" class="diet-output"></div>
+    
+      <div class="diet-card">
+        <h3>🥜 Healthy Fats</h3>
+        <p>Avocados, nuts, and seeds help absorb nutrients and are excellent with heart medications.</p>
+      </div>
+      <div class="diet-card">
+        <h3>🥛 Dairy Alternatives</h3>
+        <p>For those on iron or thyroid meds, consider calcium-alternative milks like almond or soy.</p>
+      </div>
+    </section>
 
-    <div class="tip-box">
-      <ul>
-        <li>Eat more fruits 🍎, vegetables 🥦, and whole grains 🌾.</li>
-        <li>Limit processed foods and sugary drinks 🥤.</li>
-        <li>Include protein from plant or lean animal sources 🐟🥚.</li>
-        <li>Don’t skip meals! Try to eat at regular times ⏰.</li>
-        <li>Read labels carefully – watch for added sugar and salt 🧂.</li>
-        <li>Choose healthy fats like nuts 🥜, seeds, and olive oil 🫒.</li>
-        <li>Make water your best friend – hydrate regularly 💧.</li>
-        <li>Listen to your body – eat when you’re hungry and stop when full 🧠.</li>
-        <li>Enjoy your meals and eat mindfully 🍽️.</li>
-        <li>Balance is key! No food is off-limits in moderation 🎯.</li>
-      </ul>
-    </div>
-  </div>
+    <section class="diet-grid">
+      <div class="diet-card">
+        <h3>🥦 Vegetables</h3>
+        <p>Boost immunity and liver function – excellent for most medications.</p>
+      </div>
+      <div class="diet-card">
+        <h3>🍚 Whole Grains</h3>
+        <p>Supports blood sugar regulation – especially with diabetic meds.</p>
+      </div>
+      <div class="diet-card">
+        <h3>🍊 Citrus Fruits</h3>
+        <p>Rich in Vitamin C – caution with statins or BP medications.</p>
+      </div>
+      <div class="diet-card">
+        <h3>🍗 Lean Proteins</h3>
+        <p>Pairs well with iron supplements and post-antibiotic regimens.</p>
+      </div>
+    
+      <div class="diet-card">
+        <h3>🥜 Healthy Fats</h3>
+        <p>Avocados, nuts, and seeds help absorb nutrients and are excellent with heart medications.</p>
+      </div>
+      <div class="diet-card">
+        <h3>🥛 Dairy Alternatives</h3>
+        <p>For those on iron or thyroid meds, consider calcium-alternative milks like almond or soy.</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Medimate. All rights reserved.</p>
+    &copy; 2025 Medimate | Powered by Smart Diet Advisor
   </footer>
+
+  <script>
+    function getDietTips() {
+      const med = document.getElementById("medication").value.toLowerCase();
+      const output = document.getElementById("diet-suggestions");
+      let tips = "";
+
+      if (med.includes("metformin")) {
+        tips = "<h3>Metformin Tips</h3><p>✅ Eat: Whole grains, leafy greens, beans.<br>❌ Avoid: High-sugar foods, alcohol.</p>";
+      } else if (med.includes("atorvastatin")) {
+        tips = "<h3>Statin Tips</h3><p>✅ Eat: Fiber-rich fruits, veggies, oats.<br>❌ Avoid: Grapefruit, fried foods.</p>";
+      } else if (med.includes("iron")) {
+        tips = "<h3>Iron Supplement Tips</h3><p>✅ Eat: Red meat, spinach, vitamin C fruits.<br>❌ Avoid: Dairy, tea, coffee around dosage time.</p>";
+      } else {
+        tips = "<h3>General Tips</h3><p>✅ Eat: Balanced meals, stay hydrated.<br>❌ Avoid: Processed and high-sugar foods.</p>";
+      }
+
+      output.innerHTML = tips;
+    }
+  </script>
 </body>
 </html>
